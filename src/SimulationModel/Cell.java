@@ -13,7 +13,7 @@ public class Cell {
   }
 
   public Shape getShape() {
-    return new Point(x,y);
+    return new Point(x, y);
   }
 
   public void update() {

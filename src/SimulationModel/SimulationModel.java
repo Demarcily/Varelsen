@@ -12,9 +12,9 @@ public class SimulationModel {
   int j;
   public SimulationModel(int width, int height, int scale) {
     c = new Cell[(width/scale) * (height/scale)];
-    int i = 0;
+    i = 0;
     while (i < height/scale) {
-      int j = 0;
+      j = 0;
       while(j < width/scale) {
         c[i*(height/scale) + j] = new Cell(j,i);
         System.out.println(c[i*(height/scale) + j]);

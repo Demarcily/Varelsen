@@ -6,10 +6,10 @@ import Shapes.Shape;
 import java.util.ArrayList;
 
 public class SimulationModel {
-  Scene scene;
-  Cell[] c;
-  int i;
-  int j;
+  private Scene scene;
+  private Cell[] c;
+  private int i;
+  private int j;
   public SimulationModel(int width, int height, int scale) {
     c = new Cell[(width/scale) * (height/scale)];
     i = 0;
@@ -22,6 +22,7 @@ public class SimulationModel {
       }
       i++;
     }
+    System.out.println(c[50].getAlive());
   }
 
   public void update() {

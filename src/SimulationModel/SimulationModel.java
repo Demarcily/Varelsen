@@ -4,10 +4,12 @@ import Shapes.Scene;
 import Shapes.Shape;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class SimulationModel {
   private Scene scene;
   private Cell[] c;
+  private Random random = new Random();
   private int i;
   private int j;
   public SimulationModel(int width, int height, int scale) {
@@ -16,7 +18,7 @@ public class SimulationModel {
     while (i < height/scale) {
       j = 0;
       while(j < width/scale) {
-        c[i*(height/scale) + j] = new Cell(j,i);
+        c[i*(height/scale) + j] = new Cell(j, i, random.nextBoolean());
         System.out.println(c[i*(height/scale) + j]);
         j++;
       }
@@ -37,8 +39,11 @@ public class SimulationModel {
     i = 0;
     ArrayList<Shape> shapes = new ArrayList<>();
     while (i < c.length) {
-      shapes.add(c[i].getShape());
-      i++;
+      if (c[i].getAlive()) {
+        shapes.add(c[i].getShape());
+      }
+        i++;
+
     }
     return shapes;
   }

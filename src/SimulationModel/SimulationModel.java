@@ -24,7 +24,6 @@ public class SimulationModel {
       }
       i++;
     }
-    System.out.println(c[50].getAlive());
   }
 
   public void update() {
@@ -42,8 +41,7 @@ public class SimulationModel {
       if (c[i].getAlive()) {
         shapes.add(c[i].getShape());
       }
-        i++;
-
+      i++;
     }
     return shapes;
   }

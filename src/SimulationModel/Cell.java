@@ -25,7 +25,7 @@ public class Cell {
   }
 
   public String toString() {
-    return "Cell: " + y + "" + x + "\nx: " + x + "\ny: " + y + "\n Alive: " + alive;
+    return "Cell\nx:" + x + "\ny: " + y + "\n Alive: " + alive;
   }
 
   public boolean getAlive() {

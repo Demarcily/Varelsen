@@ -8,8 +8,8 @@ public class Controller implements Runnable{
   private boolean running = false;
   private int fps = 25;
   private int ups = 4;
-  private int width = 1000;
-  private int height = 1000;
+  private int width = 800;
+  private int height = 800;
   private int scale = 10;
   private JFrame frameNative;
   private String title = "";
